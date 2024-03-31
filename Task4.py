@@ -9,11 +9,11 @@ def run_quiz(ques):
         for i, option in enumerate(options, 1):
             print(str(i) + ". " + option)
         
-        user_answer = input("Your answer (enter the option number): ")
+        user_answer = input("Your answer : ")
         
         while not user_answer.isdigit() or int(user_answer) not in range(1, len(options) + 1):
-            print("Invalid input! Please enter a valid option number.")
-            user_answer = input("Your answer (enter the option number): ")
+            print("Invalid input!")
+            user_answer = input("Your answer : ")
         
         user_answer = int(user_answer)
         correct_answer = options.index(q['answer']) + 1
